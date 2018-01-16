@@ -47,8 +47,35 @@ var User = sequelize.define('users', {
 
 })
 
+var Post = sequelize.define('posts', {
+    
+    Name: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    description: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    location: {
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+    pics: {
+        type: Sequelize.BLOB('long'),
+    },
+    active: {
+        type: Sequelize.BOOLEAN,
+        allowNull:false
+    }
+})
+
+User.hasMany(Post);
+
+
 module.exports = {
      User : User,
+     Post : Post,
      sequelize : sequelize
     }
     
