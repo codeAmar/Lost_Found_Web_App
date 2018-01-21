@@ -36,8 +36,3 @@ app.listen(3000,function(){
   
   
   module.exports= app;
-
-// sequelize
-// .sync()
-// .then(engine.createComment())
-// .then(console.log('entry added'))
