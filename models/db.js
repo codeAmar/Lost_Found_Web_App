@@ -43,6 +43,7 @@ let User = sequelize.define('users', {
             isEmail: true
         }
     },
+    // for time sake i have allowed this value to null..in future change it.
     token: {
         type: Sequelize.STRING,
         isUnique: true
